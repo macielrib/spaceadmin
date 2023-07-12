@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <base href="../">
+    <meta charset="utf-8">
+    <meta name="author" content="SpaceLabs">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="best platform">
+    <link rel="shortcut icon" href="./images/spacelabs.png">
+    <title>SpaceLabs</title>
+    <link rel="stylesheet" href="./assets/css/spacelabs.css?ver=3.1.0">
+    <link id="skin-default" rel="stylesheet" href="./assets/css/theme.css?ver=3.1.0">
+    <script src="./register.js" defer></script>
+</head>
+<body class="nk-body bg-white npc-general pg-auth dark-mode">
+    <div class="nk-app-root">
+        <div class="nk-main ">
+            <div class="nk-wrap nk-wrap-nosidebar">
+                <div class="nk-content ">
+                    <div class="nk-block nk-block-middle nk-auth-body wide-xs">
+                        <div class="brand-logo pb-4 text-center">
+                            <a href="html/index.html" class="logo-link">
+                                <img class="logo-light " src="./images/spacelabs.png" alt="logo" style="width: 4.5rem;">
+                            </a>
+                        </div>
+                        <div class="card card-bordered">
+                            <div class="card-inner card-inner-lg">
+                              <div class="nk-block-head">
+                                <div class="nk-block-head-content">
+                                  <h4 class="nk-block-title">Register Acacount</h4>
+                                  <div class="nk-block-des">
+                                    <p>Create your platform account now</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <form id="register-form" action="#">
+                                <div class="form-group">
+                                  <label class="form-label" for="nick">Nick in Game</label>
+                                  <div class="form-control-wrap">
+                                    <input type="text" class="form-control form-control-lg" id="nick" placeholder="Enter your email address or username">
+                                  </div>
+                                </div>
+                                <div class="form-group">
+                                  <label class="form-label" for="email">Your Email</label>
+                                  <div class="form-control-wrap">
+                                    <input type="text" class="form-control form-control-lg" id="email" placeholder="Enter your email address or username">
+                                  </div>
+                                </div>
+                                <div class="form-group">
+                                  <label class="form-label" for="password">Password</label>
+                                  <div class="form-control-wrap">
+                                    <a href="#" class="form-icon form-icon-right passcode-switch lg" data-target="password">
+                                      <em class="passcode-icon icon-show icon ni ni-eye"></em>
+                                      <em class="passcode-icon icon-hide icon ni ni-eye-off"></em>
+                                    </a>
+                                    <input type="password" class="form-control form-control-lg" id="password" placeholder="Enter your password">
+                                  </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="custom-control custom-control-xs custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="checkbox">
+                                        <label class="custom-control-label" for="checkbox">I agree to platform's <a href="html/terms-of-service.html">Terms of Service.</a></label>
+                                      </div>
+                                      
+                                      <div class="form-group">
+                                        <button class="btn btn-lg btn-primary btn-block" id="register-button">Register now</button>
+                                      </div>
+                                      
+                              </form>
+                              <div class="form-note-s2 text-center pt-4"> Already have an account? <a href="#"><strong>Sign in</strong></a></div>
+                            </div>
+                          </div>
+                          
+                    </div>
+                    <div class="nk-footer nk-auth-footer-full">
+                        <div class="container wide-lg">
+                            <div class="row g-3">
+                                <div class="col-lg-6 order-lg-last">
+                                    <ul class="nav nav-sm justify-content-center justify-content-lg-end">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Terms & Condition</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Discord</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Need Help?</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="nk-block-content text-center text-lg-start">
+                                        <p class="text-soft">&copy; 2023 SpaceLabs Inc. All Rights Reserved</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $('#register-form').submit(function(event) {
+      event.preventDefault();
+
+      const nick = $('#nick').val();
+      const email = $('#email').val();
+      const password = $('#password').val();
+      const checkbox = $('#checkbox').prop('checked');
+
+      const userData = {
+        nick: nick,
+        email: email,
+        password: password,
+        checkbox: checkbox
+      };
+
+      $.ajax({
+        type: 'POST',
+        url: '/register',
+        data: JSON.stringify(userData),
+        contentType: 'application/json',
+        success: function(response) {
+          alert(response.message);
+          // Redirecionar ou fazer outras ações após o registro bem-sucedido
+        },
+        error: function(xhr) {
+          alert(xhr.responseJSON.message);
+        }
+      });
+    });
+  });
+</script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="./assets/js/bundle.js?ver=3.1.2"></script>
+    <script src="./assets/js/scripts.js?ver=3.1.2"></script>
+</body>
+</html>

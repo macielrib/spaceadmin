@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+    <base href="../">
+    <meta charset="utf-8">
+    <meta name="author" content="SpaceLabs">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="best platform">
+    <link rel="shortcut icon" href="./images/spacelabs.png">
+    <title>SpaceLabs</title>
+    <link rel="stylesheet" href="./assets/css/spacelabs.css?ver=3.1.0">
+    <link id="skin-default" rel="stylesheet" href="./assets/css/theme.css?ver=3.1.0">
+</head>
+
+<body class="nk-body bg-white npc-general pg-auth dark-mode">
+    <div class="nk-app-root">
+     
+        <div class="nk-main ">
+      
+            <div class="nk-wrap nk-wrap-nosidebar">
+          
+                <div class="nk-content ">
+                    <div class="nk-block nk-block-middle nk-auth-body  wide-xs">
+                        <div class="brand-logo pb-4 text-center">
+                            <a href="html/index.html" class="logo-link">
+                                <img class="logo-light " src="./images/spacelabs.png" alt="logo" style="width: 4.5rem;">
+
+                            </a>
+                        </div>
+                        <div class="card card-bordered">
+                            <div class="card-inner card-inner-lg">
+                                <div class="nk-block-head">
+                                    <div class="nk-block-head-content">
+                                        <h4 class="nk-block-title">Sign-In Account</h4>
+                                        <div class="nk-block-des">
+                                            <p>Access the new platform using your already registered account.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <form action="html/index.html">
+                                    <div class="form-group">
+                                        <div class="form-label-group">
+                                            <label class="form-label" for="email1">Your Email</label>
+                                        </div>
+                                        <div class="form-control-wrap">
+                                            <input type="text" class="form-control form-control-lg" id="email1" placeholder="Enter your email address">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-label-group">
+                                            <label class="form-label" for="password">Password</label>
+                                            <a class="link link-primary link-sm" href="#" data-bs-toggle="modal" data-bs-target="#modalRecover">Forgot Password?</a>
+                                        </div>
+                                        <div class="form-control-wrap">
+                                            <a href="#" class="form-icon form-icon-right passcode-switch lg" data-target="password">
+                                                <em class="passcode-icon icon-show icon ni ni-eye"></em>
+                                                <em class="passcode-icon icon-hide icon ni ni-eye-off"></em>
+                                            </a>
+                                            <input type="password" class="form-control form-control-lg" id="password" placeholder="Enter your password">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <button class="btn btn-lg btn-primary btn-block">Log in</button>
+                                    </div>
+                                </form>
+                                <div class="form-note-s2 text-center pt-4"> New on our platform? <a href="html/register-page.html">Create an account</a>
+                                </div>
+                           
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nk-footer nk-auth-footer-full">
+                        <div class="container wide-lg">
+                            <div class="row g-3">
+                                <div class="col-lg-6 order-lg-last">
+                                    <ul class="nav nav-sm justify-content-center justify-content-lg-end">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Terms & Condition</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Discord</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Need Help?</a>
+                                        </li>
+                                    
+                                    </ul>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="nk-block-content text-center text-lg-start">
+                                        <p class="text-soft">&copy; 2023 SpaceLabs Inc. All Rights Reserved</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+       
+    <div class="modal fade" id="modalRecover">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+             
+                <div class="modal-body">
+                    <h5 class="modal-title">Recover your Password</h5>
+                    <p>Enter your e-mail address in the field below to send us a confirmation code.</p>
+                
+                    <form action="#" class="form-validate is-alter">
+                   
+                        <div class="form-group">
+                            <label class="form-label" for="code">Your Email</label>
+                            <div class="form-control-wrap">
+                                <input type="code" class="form-control form-control-md" id="code" placeholder="labs@space.com.br">
+                            </div>
+                        </div>
+                       
+                        
+                        <div class="form-group" style="margin-top: 0.5rem;">
+                           
+                            <a class="btn btn-outline-success btn-dim" data-bs-toggle="modal" data-bs-target="#modalCode">Send Code</a>
+
+
+                       <!--
+                        
+                        QUANDO CLICAR EM SEND CODE SUBSTITUIR POR ESSE:
+                        
+                         <ul class="preview-list g-1">
+                            
+                            <li class="loading-item">
+                                <button class="btn btn-outline-success btn-dim" type="button" disabled>
+                                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                <span class="visually-hidden">Loading...</span>
+                                </button>
+                            </li> 
+                        </ul>
+                       -->
+
+                        
+                      
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer bg-light">
+                    <span class="sub-text">Any problems?<a href="html/recover-pass.html"> Get Support</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modalCode">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+             
+                <div class="modal-body">
+                    <h5 class="modal-title">Confirmation Code</h5>
+                    <p>We have sent a 6 digit code to your email, go there and enter it below so we can confirm that it is you.</p>
+                
+                    <form action="#" class="form-validate is-alter">
+                   
+                        <div class="form-group">
+                            <label class="form-label" for="code">6-digit code</label>
+                            <div class="form-control-wrap">
+                                <input type="code" class="form-control form-control-md" id="code" placeholder="123-456">
+                            </div>
+                        </div>
+                       
+                        
+                        <div class="form-group" style="margin-top: 0.5rem;">
+                            <a class="btn btn-outline-success btn-dim" data-bs-dismiss="modal" aria-label="Close">Confirm Code</a>
+                       
+                      
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer bg-light">
+                    <span class="sub-text">Any problems?<a href="html/recover-pass.html"> Get Support</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/js/bundle.js?ver=3.1.2"></script>
+    <script src="./assets/js/scripts.js?ver=3.1.2"></script>
+
+
+</html>
